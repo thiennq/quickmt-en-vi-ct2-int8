@@ -1,0 +1,10 @@
+quickmt-en-vi (CTranslate2, int8)
+
+This is a modified copy of the model "quickmt/quickmt-en-vi" by quickmt
+(https://huggingface.co/quickmt/quickmt-en-vi), licensed under the Creative Commons
+Attribution 4.0 International License (CC BY 4.0, https://creativecommons.org/licenses/by/4.0/).
+
+Changes: the Linear and Embeddings weights in model.bin were converted from float16 to int8,
+with one scale per row (the scheme CTranslate2 uses for int8). Vocabulary, SentencePiece and
+config files are unchanged. Translations are identical to running the original model with
+CTranslate2 compute_type="int8".
